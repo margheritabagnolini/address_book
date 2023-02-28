@@ -13,8 +13,8 @@ class PeopleService {
 
     // final List<Person> toReturn =
     //     people.map((e) => Person.fromJson(e as Map<String, dynamic>)).take(1);
-    final toReturn =
-        List<Person>.from(data['results']!.map((x) => Person.fromJson(x)));
+    final toReturn = List<Person>.from(
+        data['results']!.map((x) => Person.fromJson(x)).take(1));
 
     return toReturn;
   }
